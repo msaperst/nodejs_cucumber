@@ -1,22 +1,42 @@
-/**
- * calculate step
- */
+const assert = require('assert')
+const { Before, Given, When, Then } = require('cucumber')
+const Calculator = require('../../lib/calculator');
 
-module.exports = function() {
-    var self = this;
+let calculator;
+let input;
+let input1;
+let input2;
+let result;
 
-    this.Given(/^the input "([^"]*)"$/, function(input, callback) {
-        self.expression = input;
-        callback();
-    });
+Given('the input {string}', function (string, callback) {
+    calculator = new Calculator();
+    input = string;
+    callback();
+});
 
-    this.When(/^the calculator is run$/, function(callback) {
-        self.result = self.calculator.run(self.expression);
-        callback();
-    });
+Given('the numbers {int} and {int}', function (int1, int2, callback) {
+    calculator = new Calculator();
+    input1 = int1;
+    input2 = int2;
+    callback();
+});
 
-    this.Then(/^the output should be "([^"]*)"$/, function(output, callback) {
-        self.expect(Number(self.result)).to.equal(Number(output));
-        callback();
-    });
-}
+When('the calculator is run', function (callback) {
+    result = calculator.run(input);
+    callback();
+});
+
+When('they are multiplied together', function (callback) {
+    result = calculator.multiply(input1, input2);
+    callback();
+});
+
+Then('the output should be {int}', function (string, callback) {
+    assert.equal(result, string);
+    callback();
+});
+
+Then('should the result be {int}', function (int, callback) {
+    assert.equal(result, int)
+    callback();
+});
