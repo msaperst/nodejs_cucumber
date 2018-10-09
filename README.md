@@ -1,4 +1,4 @@
-#nodejs-cucumber-sample
+# nodejs-cucumber
 
 Minimal project to show how to setup 
 [cucumber](http://cukes.info/) for nodejs environment
@@ -10,7 +10,7 @@ Minimal project to show how to setup
 * [NPM](http://npmjs.org)
 * [cucumber-js](https://github.com/cucumber/cucumber-js)
 
-##How to use
+## How to use
 
 * Install cucumber-js globally with:
 ``` shell
@@ -26,5 +26,5 @@ After that you may use this project as a base of your development
 All credit goes to [cucumber team](http://cukes.info), [Node.js community](http://nodejs.org) and 
 [cucumber-js](https://github.com/cucumber/cucumber-js) authors
 
-##Licence
+## Licence
 MIT
