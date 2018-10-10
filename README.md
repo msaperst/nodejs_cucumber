@@ -22,6 +22,10 @@ $ npm install -g cucumber
 
 After that you may use this project as a base of your development 
 
+### Notes
+If you encounter wierd errors, ensure latest/lts versions of npm and nodejs are installed.
+This is especially seen as an issue on linux systems. Instructions [here](https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/) for linux 
+
 ## Credits
 All credit goes to [cucumber team](http://cukes.info), [Node.js community](http://nodejs.org) and 
 [cucumber-js](https://github.com/cucumber/cucumber-js) authors

@@ -36,7 +36,7 @@ Then('the output should be {int}', function (string, callback) {
     callback();
 });
 
-Then('should the result be {int}', function (int, callback) {
+Then('the result should be {int}', function (int, callback) {
     assert.equal(result, int)
     callback();
 });
