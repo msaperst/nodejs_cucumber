@@ -19,4 +19,15 @@ Feature: Calculate
       | input1 | input2 | result |
       | 2      | 5      | 10     |
       | 3      | 1      | 3      |
-      | 6      | 12     | 92     |
+      | 6      | 12     | 72     |
+
+  Scenario Outline: Divide two numbers
+    Given the numbers <input1> and <input2>
+    When the first is divided by the second
+    Then the result should be <result>
+
+    Examples:
+      | input1 | input2 | result |
+      | 10     | 5      | 2      |
+      | 3      | 1      | 3      |
+      | 72     | 12     | 6      |

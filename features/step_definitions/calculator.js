@@ -31,6 +31,11 @@ When('they are multiplied together', function (callback) {
     callback();
 });
 
+When('the first is divided by the second', function (callback) {
+    result = calculator.divide(input1, input2);
+    callback();
+});
+
 Then('the output should be {int}', function (string, callback) {
     assert.equal(result, string);
     callback();
